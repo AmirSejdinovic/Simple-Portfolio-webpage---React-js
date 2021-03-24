@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
-
+import React, {useState} from 'react';
+import {Link } from 'react-router-dom';
+ 
 function Navbar(){
+  const [click, setClick] = useState(false);
   return(
       <>
          <nav className="navbar">
@@ -8,8 +10,11 @@ function Navbar(){
              <div className="navbarContainer">
                <Link to="" className="navbar-logo">
 
-                   Webiste <i class="fa fa-recycle" aria-hidden="true"></i>
+                   Webiste <i className="fa fa-recycle"></i>
                </Link>
+               <div class="menu-icon">
+                 <i className={click ? 'fa fa-times' : 'fa fa-bars'} />
+               </div>
              </div>
          </nav>
       </>
